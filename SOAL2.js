@@ -41,3 +41,10 @@ let productBin = {
     ],
     "message": "success"
   }
+
+let dataProduct = productBin.data.filter(o => o.productCode === "FBR00040101");
+let sum = 0;
+for(i=0;i<dataProduct.length;i++){
+  sum+= dataProduct[i].quantity;
+}
+console.log(sum);
